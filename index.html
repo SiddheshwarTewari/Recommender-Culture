@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine-Lit: Your Story Awaits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page-transition-overlay"></div>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header>
+            <h1>Cine-Lit</h1>
+            <p>Discover your next favorite story across movies, shows, and books.</p>
+        </header>
+
+        <main>
+            <section id="preferences-section">
+                <div class="api-key-section glass-card">
+                    <label for="api-key">Enter your Deepseek API Key</label>
+                    <input type="password" id="api-key" placeholder="Your API Key here..." title="Your API key is stored only in your browser and is not shared.">
+                </div>
+
+                <form id="recommendation-form" class="glass-card">
+                    <h2>Craft Your Recommendation</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="media-type">I want recommendations for:</label>
+                            <select id="media-type" name="media-type">
+                                <option value="movies">Movies</option>
+                                <option value="tv shows">TV Shows</option>
+                                <option value="books">Books</option>
+                                <option value="any">Any of these</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Preferred Genre(s):</label>
+                            <input type="text" id="genre" name="genre" placeholder="e.g., Sci-Fi, Dystopian">
+                        </div>
+                        <div class="form-group">
+                            <label for="keywords">Specifics (actors, authors, themes):</label>
+                            <input type="text" id="keywords" name="keywords" placeholder="e.g., Christopher Nolan, AI">
+                        </div>
+                        <div class="form-group">
+                            <label for="mood">Desired Mood:</label>
+                            <input type="text" id="mood" name="mood" placeholder="e.g., Thought-provoking, intense">
+                        </div>
+                        <div class="form-group">
+                            <label for="similar-titles">Titles you've enjoyed:</label>
+                            <input type="text" id="similar-titles" name="similar-titles" placeholder="e.g., Blade Runner, Dune">
+                        </div>
+                        <div class="form-group">
+                            <label for="era">Preferred Era/Decade:</label>
+                            <select id="era" name="era">
+                                <option value="any">Any Era</option>
+                                <option value="2020s">2020s</option>
+                                <option value="2010s">2010s</option>
+                                <option value="2000s">2000s</option>
+                                <option value="1990s">1990s</option>
+                                <option value="1980s">1980s</option>
+                                <option value="classic">Classic (pre-1980s)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="complexity">Preferred Complexity:</label>
+                            <select id="complexity" name="complexity">
+                                <option value="any">Any Complexity</option>
+                                <option value="simple">Simple & Fun</option>
+                                <option value="moderate">Moderately Complex</option>
+                                <option value="deep">Deep & Thought-Provoking</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="avoid">Anything to avoid?</label>
+                            <input type="text" id="avoid" name="avoid" placeholder="e.g., Jump scares, gore">
+                        </div>
+                    </div>
+                    <button type="submit" id="get-recommendations">Find My Story</button>
+                    <div id="error-message" class="hidden"></div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+                <div id="loading-spinner" class="hidden"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
