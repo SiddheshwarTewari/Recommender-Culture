@@ -1,34 +1,34 @@
-# Dataset files
+# Datasets
 ml-32m/
+**/ml-32m/
 *.csv
 !frontend/public/data/*.csv
 
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
+*.so
+.env
 venv/
-ENV/
 
-# MLflow
+# ML artifacts
+mlruns/
+*.pt
+model/saved_model.pt
+*.pth
+
+# Generated files
+frontend/public/data/recommendations.json
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+*.log
 mlruns/
 
 # PyTorch
